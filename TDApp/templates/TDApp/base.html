@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <meta charset="'UTF-8">
+    <head>
+        <title>ToDo App</title>
+        <style type="text/css">
+            body {
+                font-family:'Lucida Sans', 'Lucida Sans Regular', Verdana;
+                background-color: #FFFAFA;
+            }
+            header {
+                height: 100px;
+                background-color: #505050;
+                color: #FFFFFF;
+                margin: 0px auto 40px;
+                padding: 10px;
+            }
+            a.home {
+                font-size: bold;
+                color: #FFFFFF;
+            }
+            table {
+                width: 960px;
+                border: 2px solid #000000;
+                margin: 0px auto 0px;
+            }
+            tr {
+                margin: 0px;
+            }
+            td {
+                text-align: left;
+                padding: 5px;
+                width: 320px;
+                border-right: 1px solid #000000;
+            }
+            .cmplt {
+                text-align: left;
+            }
+            td:hover {
+                background-color: #FFF59D;
+            }
+            a {
+                text-decoration: none;
+            }
+            .add {
+                color: #FFFFFF;
+                font-weight: bold;
+                padding: 3px;
+                border: 2px solid #000000;
+                text-align: center;
+                background-color: #4B5320;}
+            .completed {
+                background-color: #90EE90;
+            }
+            .uncompleted {
+                background-color: #FA8072;
+            }
+            .message {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1><a href="{% url 'home' %}" class='home'>To-Do</a></h1>
+        </header>
+        {% block title %}{% endblock title %}
+        <div>
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </body>
+</html>

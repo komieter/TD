@@ -1,0 +1,10 @@
+{% extends 'TDApp/base.html' %}
+{% block title %}<h4 class='add'>Add a task</h4>{% endblock title %}
+
+{% block content %}   
+        <form method='POST'>
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type='submit' value='add'>
+        </form>
+ {% endblock content%}
